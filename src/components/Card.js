@@ -7,9 +7,19 @@ const dateName = date.getDate();
 const monthName = date.getMonth();
 const currentYear = date.getFullYear();
 
+// This is for destructuring:
+// const name = ["dog", "cat"];
+// name[0];
+// name[1];
 
+// const [dog, cat] =name;
+// const dog = name[0];
+// const cat = name[1];
+
+// /////  Anis: Lec-8 start here(Props and destructuring) 
 function Card(props){
-  console.log(props)
+  const {titleText, descText} =props;
+
   return <div className='card'>
             <h3 className='cardTitle'> {props.titleText}</h3>
             <p  className='cardDesc'>  {props.descText}</p>
@@ -19,3 +29,5 @@ function Card(props){
 }
 
 export default Card;
+
+// /////  Anis: Lec-8 Ends here(Props and destructuring) 
